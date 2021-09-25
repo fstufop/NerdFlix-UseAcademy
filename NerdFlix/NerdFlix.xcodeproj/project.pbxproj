@@ -15,6 +15,10 @@
 		2A4D41CF26FEC6CD00358E07 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4D41CD26FEC6CD00358E07 /* TableViewCell.swift */; };
 		2A4D41D026FEC6CD00358E07 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A4D41CE26FEC6CD00358E07 /* TableViewCell.xib */; };
 		2AB7179B26FF4D570044C8F6 /* Netflix.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AB7179A26FF4D570044C8F6 /* Netflix.mp3 */; };
+		2AB7179E26FF60910044C8F6 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7179C26FF60910044C8F6 /* MoviesCollectionViewCell.swift */; };
+		2AB7179F26FF60910044C8F6 /* MoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AB7179D26FF60910044C8F6 /* MoviesCollectionViewCell.xib */; };
+		2AB717A226FF69D90044C8F6 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB717A126FF69D90044C8F6 /* TableViewModel.swift */; };
+		2AB717A426FF7B0C0044C8F6 /* CollectioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB717A326FF7B0C0044C8F6 /* CollectioViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		2A4D41CD26FEC6CD00358E07 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		2A4D41CE26FEC6CD00358E07 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		2AB7179A26FF4D570044C8F6 /* Netflix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Netflix.mp3; sourceTree = "<group>"; };
+		2AB7179C26FF60910044C8F6 /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
+		2AB7179D26FF60910044C8F6 /* MoviesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesCollectionViewCell.xib; sourceTree = "<group>"; };
+		2AB717A126FF69D90044C8F6 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		2AB717A326FF7B0C0044C8F6 /* CollectioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectioViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +97,9 @@
 		2A4D41C526FEC10D00358E07 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				2A4D41CC26FEC67400358E07 /* CollectionView */,
-				2A4D41CB26FEC65D00358E07 /* Cells */,
+				2AB717A026FF69C20044C8F6 /* ViewMode */,
+				2A4D41CC26FEC67400358E07 /* CollectionViewCell */,
+				2A4D41CB26FEC65D00358E07 /* TableViewCell */,
 				2A4D41C626FEC11700358E07 /* Home */,
 			);
 			path = Scenes;
@@ -105,20 +114,31 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		2A4D41CB26FEC65D00358E07 /* Cells */ = {
+		2A4D41CB26FEC65D00358E07 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				2A4D41CD26FEC6CD00358E07 /* TableViewCell.swift */,
 				2A4D41CE26FEC6CD00358E07 /* TableViewCell.xib */,
 			);
-			path = Cells;
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
-		2A4D41CC26FEC67400358E07 /* CollectionView */ = {
+		2A4D41CC26FEC67400358E07 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				2AB7179C26FF60910044C8F6 /* MoviesCollectionViewCell.swift */,
+				2AB7179D26FF60910044C8F6 /* MoviesCollectionViewCell.xib */,
 			);
-			path = CollectionView;
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		2AB717A026FF69C20044C8F6 /* ViewMode */ = {
+			isa = PBXGroup;
+			children = (
+				2AB717A126FF69D90044C8F6 /* TableViewModel.swift */,
+				2AB717A326FF7B0C0044C8F6 /* CollectioViewModel.swift */,
+			);
+			path = ViewMode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +203,7 @@
 				2A4D41D026FEC6CD00358E07 /* TableViewCell.xib in Resources */,
 				2A4D41B926FEB83000358E07 /* Assets.xcassets in Resources */,
 				2A4D41CA26FEC13D00358E07 /* HomeViewController.xib in Resources */,
+				2AB7179F26FF60910044C8F6 /* MoviesCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,8 +215,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A4D41CF26FEC6CD00358E07 /* TableViewCell.swift in Sources */,
+				2AB717A226FF69D90044C8F6 /* TableViewModel.swift in Sources */,
 				2A4D41B026FEB82F00358E07 /* AppDelegate.swift in Sources */,
 				2A4D41C926FEC13D00358E07 /* HomeViewController.swift in Sources */,
+				2AB7179E26FF60910044C8F6 /* MoviesCollectionViewCell.swift in Sources */,
+				2AB717A426FF7B0C0044C8F6 /* CollectioViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U3U9YAKAC;
 				INFOPLIST_FILE = NerdFlix/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U3U9YAKAC;
 				INFOPLIST_FILE = NerdFlix/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

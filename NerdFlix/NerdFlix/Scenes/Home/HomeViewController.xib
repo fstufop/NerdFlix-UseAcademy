@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="NerdFlix" customModuleProvider="target">
             <connections>
+                <outlet property="tableViewMovies" destination="B2S-hp-Vup" id="bxS-ZA-gtl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,23 +33,20 @@
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="labelColor"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="mbD-mc-egc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0Ni-HV-pg5"/>
+                <constraint firstItem="B2S-hp-Vup" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="8Vk-IY-oXe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mbD-mc-egc" secondAttribute="trailing" constant="20" id="Hmr-Z2-gcx"/>
                 <constraint firstItem="mbD-mc-egc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="N76-MO-0dd"/>
-                <constraint firstItem="B2S-hp-Vup" firstAttribute="top" secondItem="mbD-mc-egc" secondAttribute="bottom" constant="5" id="Q7m-MH-uHA"/>
-                <constraint firstItem="B2S-hp-Vup" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="jnp-ed-wLK"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="B2S-hp-Vup" secondAttribute="bottom" id="xfO-zc-hfx"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="B2S-hp-Vup" secondAttribute="trailing" constant="20" id="z5k-nN-INz"/>
+                <constraint firstItem="B2S-hp-Vup" firstAttribute="top" secondItem="mbD-mc-egc" secondAttribute="bottom" constant="5" id="k4g-D4-fh7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="B2S-hp-Vup" secondAttribute="trailing" constant="20" id="vyh-c8-5KN"/>
+                <constraint firstItem="B2S-hp-Vup" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="yAH-38-3XZ"/>
             </constraints>
             <point key="canvasLocation" x="92.753623188405811" y="53.571428571428569"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

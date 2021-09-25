@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,13 +19,21 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="netflix-seeklogo.com" translatesAutoresizingMaskIntoConstraints="NO" id="0aC-kW-DZx">
                                 <rect key="frame" x="20" y="294" width="374" height="218"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-negativo" translatesAutoresizingMaskIntoConstraints="NO" id="Cwn-VR-KZ8">
+                                <rect key="frame" x="150" y="612" width="114" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="U4o-aV-Qm1"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0aC-kW-DZx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4hz-89-eMb"/>
+                            <constraint firstItem="Cwn-VR-KZ8" firstAttribute="top" secondItem="0aC-kW-DZx" secondAttribute="bottom" constant="100" id="5iF-1C-VTY"/>
                             <constraint firstItem="0aC-kW-DZx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="B7y-Kb-I85"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0aC-kW-DZx" secondAttribute="trailing" constant="20" id="iPe-Rx-IeQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cwn-VR-KZ8" secondAttribute="trailing" constant="150" id="ibZ-S7-Cax"/>
+                            <constraint firstItem="Cwn-VR-KZ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="jjE-EL-gkY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0aC-kW-DZx" secondAttribute="bottom" constant="350" id="ooU-ex-v1j"/>
                         </constraints>
                     </view>
@@ -35,6 +44,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo-negativo" width="606" height="284"/>
         <image name="netflix-seeklogo.com" width="290" height="526"/>
     </resources>
 </document>
