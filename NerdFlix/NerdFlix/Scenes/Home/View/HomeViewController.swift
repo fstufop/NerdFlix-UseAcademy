@@ -10,6 +10,7 @@ import AVFoundation
 
 
 class HomeViewController: UIViewController {
+    private var viewModel: HomeViewModel = HomeViewModel()
     
     
     //MARK: - Properties
@@ -22,21 +23,10 @@ class HomeViewController: UIViewController {
     //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        models.append(tableModel(movieTitle: "amor", imageMovieName: "logo-negativo"))
-        models.append(tableModel(movieTitle: "amor", imageMovieName: "logo-negativo"))
-        models.append(tableModel(movieTitle: "amor", imageMovieName: "netflix-seeklogo.com"))
-        models.append(tableModel(movieTitle: "amor", imageMovieName: "netflix-seeklogo.com"))
-        models.append(tableModel(movieTitle: "amor", imageMovieName: "netflix-seeklogo.com"))
-        models.append(tableModel(movieTitle: "amor", imageMovieName: "love"))
-        models.append(tableModel(movieTitle: "amor", imageMovieName: "logo-negativo"))
-        models.append(tableModel(movieTitle: "amor", imageMovieName: "logo-negativo"))
-        models.append(tableModel(movieTitle: "amor", imageMovieName: "netflix-seeklogo.com"))
-        models.append(tableModel(movieTitle: "amor", imageMovieName: "netflix-seeklogo.com"))
-        models.append(tableModel(movieTitle: "amor", imageMovieName: "netflix-seeklogo.com"))
-        models.append(tableModel(movieTitle: "amor", imageMovieName: "love"))
         tudumPlayer()
         player.play()
         setupNavigation()
+        viewModel.getPopularMovies()
         tableViewMovies.dataSource = self
         tableViewMovies.delegate = self
         tableViewMovies.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: TableViewCell.reuseIdentifier)
